@@ -67,7 +67,7 @@ section {
 .btn-primary {
   background-color: var(--primary-color);
   padding: 0.5vw 1.5vw;
-  border: .2vw solid var(--primary-color);
+  border: 0.2vw solid var(--primary-color);
   border-radius: 1vw;
   transition: all 0.3s ease-in-out;
 }
@@ -76,7 +76,7 @@ section {
   background-color: #fff;
   color: var(--primary-color);
   padding: 0.5vw 1.5vw;
-  border: .2vw solid var(--primary-color);
+  border: 0.2vw solid var(--primary-color);
   border-radius: 1vw;
   transition: all 0.3s ease-in-out;
 }
@@ -290,7 +290,7 @@ header {
 .coupon-discount {
   width: 70%;
   padding: 2vw;
-  border-radius: .8vw;
+  border-radius: 0.8vw;
 }
 
 .coupon-divider {
@@ -299,7 +299,7 @@ header {
   left: 70%;
   width: 0.1vw;
   height: 100%;
-  border: .1vw dashed #fff;
+  border: 0.1vw dashed #fff;
 }
 
 .coupon-code {
@@ -308,7 +308,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: .8vw;
+  border-radius: 0.8vw;
 }
 
 .coupon-discount h3 {
@@ -350,3 +350,23 @@ header {
   padding-top: 3vw;
 }
 /* ------------------------------> End Offer Section <------------------------------ */
+
+/* ------------------------------> Start Book Now Section <------------------------------ */
+.book-now-section-container {
+  width: 100%;
+  height: 100dvh;
+  background-color: #f1f1f1;
+  border-top: 0.3vw solid var(--primary-color);
+  border-radius: 7vw;
+}
+
+.book-now-title-and-description {
+  text-align: center;
+  padding-top: clamp(2rem, calc(2.5rem + 4.5vw), 100rem);
+}
+
+.book-now-title-and-description h2 {
+  font-size: var(--secondary-heading-size);
+}
+
+/* ------------------------------> End Book Now Section <------------------------------ */
