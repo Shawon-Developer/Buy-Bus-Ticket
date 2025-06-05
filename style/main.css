@@ -5,12 +5,16 @@
   --logo-size: clamp(2.5rem, calc(1rem + 2.5vw), 100rem);
   --nav-link-size: clamp(1.5rem, calc(0.5rem + 1.2vw), 100rem);
   --primary-heading-size: clamp(3.5rem, calc(2.5rem + 3.5vw), 100rem);
+  --secondary-heading-size: clamp(1.5rem, calc(1rem + 2.5vw), 100rem);
   --primary-text-size: clamp(1.5rem, calc(0.5rem + 1.5vw), 100rem);
   --secondary-text-size: clamp(1rem, calc(0.5rem + 1vw), 100rem);
   --primary-button-font-size: clamp(1rem, calc(0.5rem + 1vw), 100rem);
   --banner-ext-info-icon-size: clamp(2rem, calc(1.5rem + 1.5vw), 100rem);
   --banner-ext-info-title-size: clamp(2rem, calc(1rem + 1.5vw), 100rem);
   --banner-ext-info-padding: clamp(1rem, calc(1rem + 1.5vw), 100rem);
+  --gray-text: #4e4e4e;
+  --coupon-heading-size: clamp(2rem, calc(1rem + 2.5vw), 100rem);
+  --coupon-code-heading-size: clamp(2rem, calc(1rem + 1.5vw), 100rem);
 }
 
 * {
@@ -39,7 +43,7 @@ ul li {
 }
 
 section {
-  padding-top: clamp(2rem, calc(2rem + 4.5vw), 100rem);
+  padding-top: clamp(2rem, calc(2.5rem + 4.5vw), 100rem);
 }
 
 .row {
@@ -57,12 +61,23 @@ section {
   font-size: var(--primary-button-font-size);
   font-weight: 700;
   border: 0.2vw solid var(--primary-color);
+  cursor: pointer;
 }
 
 .btn-primary {
   background-color: var(--primary-color);
-  border-radius: 1vw;
   padding: 0.5vw 1.5vw;
+  border: .2vw solid var(--primary-color);
+  border-radius: 1vw;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: var(--primary-color);
+  padding: 0.5vw 1.5vw;
+  border: .2vw solid var(--primary-color);
+  border-radius: 1vw;
   transition: all 0.3s ease-in-out;
 }
 
@@ -244,6 +259,94 @@ header {
 
 .info-content .info-description {
   font-size: var(--secondary-text-size);
-  color: #4e4e4e;
+  color: var(--gray-text);
 }
 /* ------------------------------> End Header Section <------------------------------ */
+
+/* ------------------------------> Start Offer Section <------------------------------ */
+.offer-title {
+  text-align: center;
+  padding-bottom: 2vw;
+}
+
+.offer-title .title {
+  font-size: var(--secondary-heading-size);
+}
+
+.offer-card-container {
+  display: flex;
+  gap: 2vw;
+  padding-top: 1vw;
+}
+
+.coupon {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.coupon-discount {
+  width: 70%;
+  padding: 2vw;
+  border-radius: .8vw;
+}
+
+.coupon-divider {
+  position: absolute;
+  top: 0;
+  left: 70%;
+  width: 0.1vw;
+  height: 100%;
+  border: .1vw dashed #fff;
+}
+
+.coupon-code {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: .8vw;
+}
+
+.coupon-discount h3 {
+  font-size: var(--coupon-heading-size);
+}
+
+.coupon-code h4 {
+  font-size: var(--coupon-code-heading-size);
+}
+
+.coupon-discount p,
+.coupon-code p {
+  font-size: var(--secondary-text-size);
+}
+
+.coupon-discount p:last-child,
+.coupon-code p {
+  color: var(--gray-text);
+}
+
+.coupon-20 .coupon-discount {
+  background-color: #f7b731;
+}
+
+.coupon-20 .coupon-code {
+  background-color: #f7b731;
+}
+
+.coupon-30 .coupon-discount {
+  background-color: #20bf6b;
+}
+
+.coupon-30 .coupon-code {
+  background-color: #20bf6b;
+}
+
+.offer-btn-container {
+  text-align: center;
+  padding-top: 3vw;
+}
+/* ------------------------------> End Offer Section <------------------------------ */
