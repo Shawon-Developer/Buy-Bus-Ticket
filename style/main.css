@@ -15,6 +15,7 @@
   --gray-text: #4e4e4e;
   --coupon-heading-size: clamp(2rem, calc(1rem + 2.5vw), 100rem);
   --coupon-code-heading-size: clamp(2rem, calc(1rem + 1.5vw), 100rem);
+  --paribahan-ticket-title-size: clamp(1.5rem, calc(0.5rem + 2.2vw), 100rem);
 }
 
 * {
@@ -44,6 +45,10 @@ ul li {
 
 section {
   padding-top: clamp(2rem, calc(2.5rem + 4.5vw), 100rem);
+}
+
+p {
+  font-size: var(--secondary-text-size);
 }
 
 .row {
@@ -354,10 +359,9 @@ header {
 /* ------------------------------> Start Book Now Section <------------------------------ */
 .book-now-section-container {
   width: 100%;
-  height: 100dvh;
   background-color: #f1f1f1;
   border-top: 0.3vw solid var(--primary-color);
-  border-radius: 7vw;
+  border-radius: 7vw 7vw 0 0;
 }
 
 .book-now-title-and-description {
@@ -367,6 +371,119 @@ header {
 
 .book-now-title-and-description h2 {
   font-size: var(--secondary-heading-size);
+}
+
+.ticket-info-container {
+  padding-top: 2.5vw;
+}
+
+.ticket-info-container .ticket-card {
+  position: relative;
+  display: flex;
+}
+
+.ticket-card .info {
+  width: 75%;
+  background-color: #fff;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1vw;
+  padding: 2vw;
+  border-radius: 2vw;
+}
+
+.ticket-card .info .paribahan-name {
+  grid-column: 1 / span 4;
+}
+
+.ticket-card .info .paribahan-name h5 {
+  font-size: var(--paribahan-ticket-title-size);
+}
+
+.ticket-card .info .paribahan-name p {
+  font-size: var(--secondary-text-size);
+  color: var(--gray-text);
+}
+
+.ticket-card .info .seat-available {
+  grid-column: 5 / span 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #3498db1a;
+  border-radius: .5vw;
+}
+
+.ticket-card .info .seat-available p {
+  color: var(--primary-color);
+  font-size: var(--primary-text-size);
+  font-weight: 500;
+}
+
+.ticket-card .info .destination {
+  grid-column: 1 / span 6;
+  background-color: #f1f1f1;
+  padding: 1vw;
+  border-radius: .5vw;
+}
+
+.destination .info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 0;
+  border-bottom: 0.2vw dashed #bfbfbf;
+}
+
+.destination .info-row:last-child {
+  border: none;
+}
+
+.destination .info-row p:first-child {
+  color: var(--gray-text);
+}
+
+.destination .info-row p:last-child {
+  font-weight: 500;
+}
+
+.destination .going-through .card {
+  background-color: #bfbfbf;
+  padding: 0.7vw;
+  border-radius: 0.5vw;
+}
+
+.destination .going-through .card p {
+  color: #000;
+  font-weight: 400;
+}
+
+.ticket-card .divider {
+  position: absolute;
+  top: 50%;
+  left: 75%;
+  width: 0.1vw;
+  height: 85%;
+  transform: translateY(-50%);
+  border: 0.1vw dashed var(--primary-color);
+}
+
+.ticket-card .price {
+  width: 25%;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2vw;
+}
+
+.ticket-card .price h6 {
+  font-size: var(--paribahan-ticket-title-size);
+}
+
+.ticket-card .price p {
+  font-weight: 500;
 }
 
 /* ------------------------------> End Book Now Section <------------------------------ */
