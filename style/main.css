@@ -103,7 +103,12 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #fff;
+  transition: 0.5s ease;
   z-index: 999;
+}
+
+.sticky-nav {
+  box-shadow: 0 0 0.1vw #000, 0 0 0.2vw #000, 0 0 0.3vw #000;
 }
 
 .nav-bar-container {
@@ -522,9 +527,15 @@ header {
 }
 
 .book-seat .seat-status p {
-  background-color: #3498db1a;
-  padding: 0.5vw 1.5vw;
-  border-radius: 0.3vw;
+  color: var(--primary-color);
+  border: 0.2vw solid var(--primary-color);
+  padding: 0.5vw 1vw;
+  border-radius: 0.5vw;
+}
+
+.book-seat .seat-status p:last-child {
+  color: #000;
+  background-color: var(--primary-color);
 }
 
 .get-seat-number {
@@ -544,6 +555,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  font-weight: 500;
 }
 
 .seat-number-row .seat-btn.first {
