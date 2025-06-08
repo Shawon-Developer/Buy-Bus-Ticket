@@ -16,6 +16,7 @@
   --coupon-heading-size: clamp(2rem, calc(1rem + 2.5vw), 100rem);
   --coupon-code-heading-size: clamp(2rem, calc(1rem + 1.5vw), 100rem);
   --paribahan-ticket-title-size: clamp(1.5rem, calc(0.5rem + 2.2vw), 100rem);
+  --primary-border-color: #bfbfbf;
 }
 
 * {
@@ -411,7 +412,7 @@ header {
   justify-content: center;
   align-items: center;
   background-color: #3498db1a;
-  border-radius: .5vw;
+  border-radius: 0.5vw;
 }
 
 .ticket-card .info .seat-available p {
@@ -423,16 +424,17 @@ header {
 .ticket-card .info .destination {
   grid-column: 1 / span 6;
   background-color: #f1f1f1;
-  padding: 1vw;
-  border-radius: .5vw;
+  padding: 1vw 2vw;
+  border-radius: 0.5vw;
 }
 
 .destination .info-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 1vw;
   padding: 1vw 0;
-  border-bottom: 0.2vw dashed #bfbfbf;
+  border-bottom: 0.2vw dashed var(--primary-border-color);
 }
 
 .destination .info-row:last-child {
@@ -448,7 +450,7 @@ header {
 }
 
 .destination .going-through .card {
-  background-color: #bfbfbf;
+  background-color: #cfcfcf;
   padding: 0.7vw;
   border-radius: 0.5vw;
 }
@@ -484,6 +486,177 @@ header {
 
 .ticket-card .price p {
   font-weight: 500;
+}
+
+.booking-seat-container {
+  display: flex;
+  background-color: #fff;
+  margin-top: 3vw;
+  padding: 2vw;
+  border-radius: 2vw;
+}
+
+.book-seat {
+  width: 60%;
+  padding-right: 2vw;
+  border-right: 0.2vw dashed var(--primary-border-color);
+}
+
+.book-seat .title,
+.conform-seat .title {
+  padding-bottom: 0.7vw;
+  border-bottom: 0.2vw dashed var(--primary-border-color);
+}
+
+.book-seat .title h5,
+.conform-seat .title h5 {
+  font-size: var(--paribahan-ticket-title-size);
+}
+
+.book-seat .seat-status {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1vw 0;
+  border-bottom: 0.2vw dashed var(--primary-border-color);
+}
+
+.book-seat .seat-status p {
+  background-color: #3498db1a;
+  padding: 0.5vw 1.5vw;
+  border-radius: 0.3vw;
+}
+
+.get-seat-number {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5vw;
+  padding-top: 1.5vw;
+}
+
+.get-seat-number .seat-number-row {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  gap: 0.5vw;
+}
+
+.seat-number-row p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.seat-number-row .seat-btn.first {
+  grid-column: 2 / span 2;
+}
+
+.seat-number-row .seat-btn.second {
+  grid-column: 4 / span 2;
+}
+
+.seat-number-row .seat-btn.third {
+  grid-column: 7 / span 2;
+}
+
+.seat-number-row .seat-btn.fourth {
+  grid-column: 9 / span 2;
+}
+
+.conform-seat {
+  width: 40%;
+  padding-left: 2vw;
+}
+
+.conform-seat .selected-seat-and-price {
+  background-color: #f1f1f1;
+  margin-top: 1vw;
+  padding: 0.5vw;
+}
+
+.selected-seat-and-price .seat-class-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5vw;
+  border-bottom: 0.2vw dashed var(--primary-border-color);
+}
+
+.selected-seat-and-price .total-ticket-price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5vw;
+  border-top: 0.2vw dashed var(--primary-border-color);
+}
+
+.selected-seat-and-price .total-ticket-price:last-child {
+  margin-top: 0.5vw;
+}
+
+.get-discount {
+  padding: 0.5vw;
+}
+
+.get-discount label {
+  display: flex;
+  width: 100%;
+  background-color: #fff;
+  padding: 0.7vw 1vw;
+  border-radius: 1vw;
+}
+
+.get-discount label input {
+  width: 100%;
+  font-size: var(--secondary-text-size);
+  border: none;
+}
+
+.get-discount label input:focus-within {
+  outline: none;
+}
+
+.get-discount label button {
+  font-size: var(--secondary-text-size);
+}
+
+.get-user-info form label p {
+  font-size: var(--primary-text-size);
+  font-weight: 500;
+  padding-top: 1vw;
+}
+
+.get-user-info form label input {
+  width: 100%;
+  font-size: var(--secondary-text-size);
+  margin-top: 0.3vw;
+  padding: 0.7vw;
+  border: 0.1vw solid var(--primary-border-color);
+  border-radius: 0.5vw;
+}
+
+.get-user-info form label input:focus-within {
+  outline: 0.2vw solid var(--primary-border-color);
+}
+
+.get-user-info form .form-btn-container {
+  padding-top: 1vw;
+}
+
+.get-user-info form .form-btn-container button {
+  width: 100%;
+}
+
+.conform-seat .privacy-policy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1vw;
+}
+
+.conform-seat .privacy-policy a {
+  font-size: var(--secondary-text-size);
+  text-decoration: underline;
+  color: var(--gray-text);
 }
 
 /* ------------------------------> End Book Now Section <------------------------------ */
