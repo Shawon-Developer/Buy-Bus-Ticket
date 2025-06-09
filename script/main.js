@@ -120,4 +120,28 @@ document.addEventListener("DOMContentLoaded", function () {
       }).showToast();
     }
   });
+
+  // Passenger Information Form
+  const userInfoForm = document.querySelector("#userInfoForm");
+
+  userInfoForm.addEventListener("submit", function (event) {
+    event.preventDefault();
+
+    if (parseInt(totalTicketPrice.textContent) >= 150) {
+      window.location.href = "./pages/conformSeat.html";
+    } else {
+      Toastify({
+        text: "Booked A Seat First",
+        duration: 3000,
+        close: true,
+        gravity: "top", // `top` or `bottom`
+        position: "right", // `left`, `center` or `right`
+        stopOnFocus: true, // Prevents dismissing of toast on hover
+        style: {
+          background: "#ff4757",
+          fontSize: "1.3vw",
+        },
+      }).showToast();
+    }
+  });
 });

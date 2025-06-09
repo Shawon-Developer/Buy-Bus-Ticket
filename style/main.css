@@ -615,8 +615,8 @@ header {
 
 #seatSelected {
   background-color: var(--primary-color);
-  padding: .3vw;
-  border-radius: .3vw;
+  padding: 0.3vw;
+  border-radius: 0.3vw;
   font-weight: 500;
 }
 
@@ -714,3 +714,48 @@ header {
 }
 
 /* ------------------------------> End Book Now Section <------------------------------ */
+
+/* ------------------------------> Start Conform Booked Seat Section <------------------------------ */
+.conformBookedSeat {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00000030;
+  z-index: 9999;
+}
+
+.main-content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2vw;
+  background-color: #fff;
+  padding: 5vw;
+  border-radius: 1vw;
+}
+
+.success-tick i {
+  font-size: var(--primary-heading-size);
+  color: var(--primary-color);
+}
+
+.success-message h3 {
+  font-size: var(--secondary-heading-size);
+  color: var(--primary-color);
+}
+
+.success-description p {
+  font-size: var(--primary-text-size);
+}
+
+.success-description p:last-child {
+  color: var(--gray-text);
+  padding-top: 0.5vw;
+  padding-bottom: 1.5vw;
+}
+/* ------------------------------> End Conform Booked Seat Section <------------------------------ */
