@@ -613,6 +613,28 @@ header {
   border-bottom: 0.2vw dashed var(--primary-border-color);
 }
 
+#seatSelected {
+  background-color: var(--primary-color);
+  padding: .3vw;
+  border-radius: .3vw;
+  font-weight: 500;
+}
+
+#selectedSeatInfo {
+  padding: 0.7vw 1vw;
+}
+
+#selectedSeatInfo .seat-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.3vw;
+}
+
+#selectedSeatInfo .seat-info:first-child {
+  margin-top: 0;
+}
+
 .selected-seat-and-price .total-ticket-price {
   display: flex;
   justify-content: space-between;
