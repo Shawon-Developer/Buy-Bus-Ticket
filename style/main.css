@@ -87,6 +87,15 @@ p {
   transition: all 0.3s ease-in-out;
 }
 
+.btn-error {
+  background-color: #fff;
+  color: #ff4757;
+  padding: 0.5vw 1.5vw;
+  border: 0.2vw solid #ff4757;
+  border-radius: 1vw;
+  transition: all 0.3s ease-in-out;
+}
+
 /* ------------------------------> Start Header Section <------------------------------ */
 header {
   width: 100%;
@@ -533,6 +542,13 @@ header {
   border-radius: 0.5vw;
 }
 
+.book-seat .seat-status p:nth-child(2) {
+  color: #ff4757;
+  border: 0.2vw solid #ff4757;
+  padding: 0.5vw 1vw;
+  border-radius: 0.5vw;
+}
+
 .book-seat .seat-status p:last-child {
   color: #000;
   background-color: var(--primary-color);
@@ -572,6 +588,10 @@ header {
 
 .seat-number-row .seat-btn.fourth {
   grid-column: 9 / span 2;
+}
+
+.seat-number-row .seat-btn:hover {
+  background-color: #3498db30;
 }
 
 .conform-seat {
