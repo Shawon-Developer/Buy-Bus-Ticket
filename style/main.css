@@ -2,20 +2,20 @@
 
 :root {
   --primary-color: #3498db;
-  --logo-size: clamp(2.5rem, calc(1rem + 2.5vw), 100rem);
-  --nav-link-size: clamp(1.5rem, calc(0.5rem + 1.2vw), 100rem);
+  --logo-size: clamp(3.5rem, calc(1rem + 2.5vw), 100rem);
+  --nav-link-size: clamp(1.8rem, calc(0.5rem + 1.2vw), 100rem);
   --primary-heading-size: clamp(3.5rem, calc(2.5rem + 3.5vw), 100rem);
-  --secondary-heading-size: clamp(1.5rem, calc(1rem + 2.5vw), 100rem);
-  --primary-text-size: clamp(1.5rem, calc(0.5rem + 1.5vw), 100rem);
-  --secondary-text-size: clamp(1rem, calc(0.5rem + 1vw), 100rem);
-  --primary-button-font-size: clamp(1rem, calc(0.5rem + 1vw), 100rem);
-  --banner-ext-info-icon-size: clamp(2rem, calc(1.5rem + 1.5vw), 100rem);
-  --banner-ext-info-title-size: clamp(2rem, calc(1rem + 1.5vw), 100rem);
+  --secondary-heading-size: clamp(2.5rem, calc(1rem + 2.5vw), 100rem);
+  --primary-text-size: clamp(2rem, calc(0.5rem + 1.5vw), 100rem);
+  --secondary-text-size: clamp(1.6rem, calc(0.5rem + 1vw), 100rem);
+  --primary-button-font-size: clamp(1.6rem, calc(0.5rem + 1vw), 100rem);
+  --banner-ext-info-icon-size: clamp(2.3rem, calc(1.5rem + 1.5vw), 100rem);
+  --banner-ext-info-title-size: clamp(2.1rem, calc(1rem + 1.5vw), 100rem);
   --banner-ext-info-padding: clamp(1rem, calc(1rem + 1.5vw), 100rem);
   --gray-text: #4e4e4e;
   --coupon-heading-size: clamp(2rem, calc(1rem + 2.5vw), 100rem);
-  --coupon-code-heading-size: clamp(2rem, calc(1rem + 1.5vw), 100rem);
-  --paribahan-ticket-title-size: clamp(1.5rem, calc(0.5rem + 2.2vw), 100rem);
+  --coupon-code-heading-size: clamp(1.9rem, calc(1rem + 1.5vw), 100rem);
+  --paribahan-ticket-title-size: clamp(1.7rem, calc(0.5rem + 2.2vw), 100rem);
   --primary-border-color: #bfbfbf;
 }
 
@@ -66,13 +66,13 @@ p {
 .btn {
   font-size: var(--primary-button-font-size);
   font-weight: 700;
+  padding: 0.5vw 1.5vw;
   border: 0.2vw solid var(--primary-color);
   cursor: pointer;
 }
 
 .btn-primary {
   background-color: var(--primary-color);
-  padding: 0.5vw 1.5vw;
   border: 0.2vw solid var(--primary-color);
   border-radius: 1vw;
   transition: all 0.3s ease-in-out;
@@ -81,7 +81,6 @@ p {
 .btn-secondary {
   background-color: #fff;
   color: var(--primary-color);
-  padding: 0.5vw 1.5vw;
   border: 0.2vw solid var(--primary-color);
   border-radius: 1vw;
   transition: all 0.3s ease-in-out;
@@ -90,7 +89,6 @@ p {
 .btn-error {
   background-color: #fff;
   color: #ff4757;
-  padding: 0.5vw 1.5vw;
   border: 0.2vw solid #ff4757;
   border-radius: 1vw;
   transition: all 0.3s ease-in-out;
@@ -99,7 +97,7 @@ p {
 /* ------------------------------> Start Header Section <------------------------------ */
 header {
   width: 100%;
-  height: 100dvh;
+  height: 100vh;
 }
 
 #SeatSnapNavBar {
@@ -759,3 +757,64 @@ header {
   padding-bottom: 1.5vw;
 }
 /* ------------------------------> End Conform Booked Seat Section <------------------------------ */
+
+/* ------------------------------> Responsive Design <------------------------------ */
+
+@media only screen and (max-width: 1024px) {
+  .row {
+    width: 90%;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .nav-bar-container {
+    flex-direction: column;
+    gap: 2vw;
+  }
+
+  .nav-bar-container .seat-snap-logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .seat-snap-logo .logo {
+    justify-content: center;
+  }
+
+  .nav-bar-container .nav-links {
+    width: 100%;
+  }
+
+  .nav-bar-container .nav-links ul {
+    justify-content: center;
+  }
+
+  .offer-card-container {
+    flex-direction: column;
+  }
+
+  .info-card-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .booking-seat-container {
+    flex-direction: column;
+    gap: 4vw;
+  }
+
+  .booking-seat-container .book-seat {
+    width: 100%;
+    border-right: 0;
+  }
+
+  .booking-seat-container .conform-seat {
+    width: 100%;
+    border-left: 0;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  .row {
+    width: 97%;
+  }
+}
