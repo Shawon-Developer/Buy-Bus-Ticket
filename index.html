@@ -11,6 +11,13 @@
       type="image/x-icon"
     />
 
+    <!-- Third Party CSS Links -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+
     <!-- Custom CSS Links -->
     <link rel="stylesheet" href="./style/main.css" />
   </head>
@@ -335,28 +342,28 @@
                     <p>Class</p>
                     <p>Price</p>
                   </div>
-                  <div id="selectedSeatInfo">
-                    
-                  </div>
+                  <div id="selectedSeatInfo"></div>
                   <div class="total-ticket-price">
                     <p>Total Price</p>
                     <p>BDT <span id="totalTicketPrice">0</span></p>
                   </div>
                   <div class="get-discount">
-                    <label for="coupon-code-input">
+                    <label for="couponCodeInput">
                       <input
                         type="text"
                         name="coupon-code"
-                        id="coupon-code-input"
+                        id="couponCodeInput"
                         placeholder="Have any coupon ?"
                         autocomplete="false"
                       />
-                      <button class="btn btn-primary">Apply</button>
+                      <button id="applyCoupon" class="btn btn-primary">
+                        Apply
+                      </button>
                     </label>
                   </div>
                   <div class="total-ticket-price">
                     <p>Grand Total</p>
-                    <p>BDT <span>0</span></p>
+                    <p>BDT <span id="discountTicketPrice">0</span></p>
                   </div>
                 </div>
                 <div class="get-user-info">
@@ -413,6 +420,10 @@
     <script
       src="https://kit.fontawesome.com/13ec0906de.js"
       crossorigin="anonymous"
+    ></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
     ></script>
 
     <!-- Custom JavaScript Links -->
